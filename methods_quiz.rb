@@ -40,9 +40,8 @@ def icy_hot?(tempOne, tempTwo)
 
     if tempOne > 100 || tempTwo > 100
         return true
-    end
 
-    if tempOne < 0 || tempTwo < 0
+    elsif tempOne < 0 || tempTwo < 0
         return true
     
     else 
