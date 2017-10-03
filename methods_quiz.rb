@@ -1,18 +1,17 @@
   
 # TODO - write has_teen?
-def has_teen?(array)
-    teens = 0
-    array.each do |number|
-        if number == 13 || number == 14 ||number == 15 || number == 16 ||number == 17 || number == 18 || number == 19
-            teens += 1
-        end
+def has_teen?(n1,n2,n3)
+   
+   
+    if n1 >= 13 && n1 <= 19
+        return true
+    elsif n2 >= 13 && n2 <= 19
+        return true
+    elsif n3 >= 13 && n3 <=19
+        return true
     end
 
-    if teens > 0
-        return true
-    else 
-        return false
-    end
+    return false
 
     
 end
@@ -38,10 +37,10 @@ end
 # TODO - write icy_hot?
 def icy_hot?(tempOne, tempTwo)
 
-    if tempOne > 100 || tempTwo > 100
+    if tempOne > 100 && tempTwo < 0
         return true
 
-    elsif tempOne < 0 || tempTwo < 0
+    elsif tempOne < 0 && tempTwo > 100
         return true
     
     else 
@@ -73,9 +72,12 @@ end
 # TODO - write two_as_one?
 
 
-def two_as_one?(n1,n2,sum)
-    added = n1+n2 
-    if added == sum
+def two_as_one?(n1,n2,n3)
+    addedTwoOne = n1+n2 
+    addedThreeTwo = n3 + n2
+    addedThreeOne = n3 + n1
+    
+    if addedTwoOne == n3 || addedThreeTwo == n1 ||addedThreeOne == n2
         return true
     else
         return false
